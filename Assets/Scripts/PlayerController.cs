@@ -1,5 +1,4 @@
-﻿using Assets.Scripts;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +24,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        
         GameManager.Player = this;
         _ground = GameObject.FindGameObjectWithTag("Ground");
         float startingX = (_ground.transform.localScale.x % 2 == 0) ? 0.5f : 0f;

@@ -1,5 +1,4 @@
-﻿using Assets.Scripts;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,7 +41,6 @@ public static class GameManager
     public static int Ranking;
 
 
-    public static List<UserScore> Scores;
 
 
     
@@ -58,7 +56,6 @@ public static class GameManager
     {
         CurrentState = GameState.ENDGAME;
         UI.ShowState(CurrentState);
-        Service.GetRanking(Distance);
     }
 
 
@@ -81,16 +78,5 @@ public static class GameManager
     }
 
 
-    /**
-     * Post the score the service.
-     */
-    public static void PostScore(string name)
-    {
-        UserScore userScore = new UserScore();
-        userScore.name = name;
-        userScore.score = Distance;
-
-        Service.AddHighScore(userScore);
-    }
 
 }
